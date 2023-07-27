@@ -26,7 +26,7 @@ function Project({id = 1, post}: any) {
             <p className='text-5xl'>{title}</p>
             <div className='flex flex-wrap gap-2'>
                 {
-                    technologies.map(technology => <Technology technology={technology}/>)
+                    technologies.map((technology, index) => <Technology key={index} technology={technology}/>)
                 }
             </div>
             <div className=''>
