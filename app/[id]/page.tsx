@@ -20,6 +20,19 @@ export default function PostPage({params} : any) {
         \`\`\`
             code1 
             code2
+            code2
+            code2
+            code2
+            code2
+            code2
+            code2
+            code2
+            code2
+            code2
+            code2
+            code2
+            code2
+            code2
             code3
         \`\`\`
         * italic *
@@ -51,7 +64,7 @@ async function Post({content}: any) {
                 <p className='text-gray-500 text-2xl'>{date}</p>
             </div>
             <p>{lorem}</p>
-            <div className='flex flex-col p-2 border ' dangerouslySetInnerHTML={{__html: content}}/>
+            <div className='flex flex-col p-2 border' dangerouslySetInnerHTML={{__html: content}}/>
         </div>
     )
 }

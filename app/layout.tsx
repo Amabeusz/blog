@@ -3,6 +3,7 @@ import type {Metadata} from 'next'
 import {Inter} from 'next/font/google'
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -19,9 +20,14 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={inter.className}>
-        <div className='flex justify-between border-b-2 border-gray-800 text-xl p-2'>
+        <div className='flex justify-between items-center border-b-2 border-gray-800 text-xl p-2'>
             <Link href='/'>
-                <p>Logos</p>
+                <div className='flex'>
+                    <Image src={'/ant-svgrepo-com.svg'} alt={'test'} width={35} height={35}></Image>
+                    <Image src={'/ant-svgrepo-com.svg'} alt={'test'} width={35} height={35}></Image>
+                    <Image src={'/ant-svgrepo-com.svg'} alt={'test'} width={35} height={35}></Image>
+                    <Image src={'/ant-svgrepo-com.svg'} alt={'test'} width={35} height={35}></Image>
+                </div>
             </Link>
             <div className='flex space-x-6'>
                 <Link href='/'>
