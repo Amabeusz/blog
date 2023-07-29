@@ -58,7 +58,7 @@ async function Post({content}: any) {
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
 
     return (
-        <div className='max-w-2xl'>
+        <div className='max-w-[60%]'>
             <div className='flex items-center'>
                 <p className='flex-auto text-4xl'>{title}</p>
                 <p className='text-gray-500 text-2xl'>{date}</p>

@@ -4,6 +4,7 @@ import {Inter} from 'next/font/google'
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Menu from "@/app/component/layout_menu";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -29,7 +30,7 @@ export default function RootLayout({
                     <Image src={'/ant-svgrepo-com.svg'} alt={'test'} width={35} height={35}></Image>
                 </div>
             </Link>
-            <div className='flex space-x-6'>
+            <div className='hidden md:flex space-x-6'>
                 <Link href='/'>
                     <p>Home</p>
                 </Link>
@@ -46,7 +47,7 @@ export default function RootLayout({
                     <p>About</p>
                 </Link>
             </div>
-
+            <Menu/>
         </div>
         {children}
         </body>

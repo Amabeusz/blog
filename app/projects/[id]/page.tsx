@@ -21,7 +21,7 @@ function Project({id = 1, post}: any) {
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
 
     return (
-        <div className='flex flex-col max-w-[75%] gap-4'>
+        <div className='flex flex-col max-w-[60%] gap-4'>
             <ImageCarousel />
             <p className='text-5xl'>{title}</p>
             <div className='flex flex-wrap gap-2'>
