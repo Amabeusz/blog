@@ -4,11 +4,11 @@ export default function Home() {
     return (
         <main>
             <div className="flex flex-col items-center">
-                <p className='text-9xl border-b-2 border-white '>TITLE</p>
+                <p className='text-9xl'>TITLE</p>
                 <div className='max-w-[60%]'>
                     <Post/>
                     <Post id={2}/>
-                    <Link href={'/new'}>
+                    <Link href={'/post/new'}>
                         Add new
                     </Link>
                 </div>
@@ -29,13 +29,13 @@ function Post({id = 1, post}: any) {
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
 
     return (
-        <Link href={`/${id}`}>
+        <Link href={`/post/${id}`}>
             <div className='flex flex-col py-4 border-b-2 border-gray-800'>
                 <div className='flex items-center'>
                     <p className='flex-auto text-4xl'>{title}</p>
-                    <p className='text-gray-500 text-xl'>{date}</p>
+                    <p className='text-gray-500 text-lg'>{date}</p>
                 </div>
-                <p className='text-gray-400'>{content}</p>
+                <p className='text-gray-400 pt-2'>{content}</p>
             </div>
         </Link>
     );

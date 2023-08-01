@@ -1,4 +1,6 @@
-import compile from "@/app/[id]/components/compiler";
+import compile from "@/app/post/[id]/components/compiler";
+import Comments from "@/app/post/[id]/components/comments/comments";
+import CommentSection from "@/app/post/[id]/components/comments/comments";
 
 async function getPost(id : string) {
 
@@ -45,6 +47,7 @@ export default function PostPage({params} : any) {
     return (
         <div className='flex flex-col items-center'>
             <Post content={compile(content)}/>
+            <CommentSection />
         </div>
     )
 }

@@ -27,7 +27,7 @@ export default function ImageCarousel() {
 
     return (
         <div className='flex justify-around items-center'>
-            <button className='backdrop-brightness-125 p-4 rounded-full'
+            <button className='backdrop-brightness-125 p-4 rounded-full disabled:opacity-25' disabled={currentIndex === 0 }
                     onClick={event => previousImage()}>{'<'}</button>
             {
                 images.map((image, index) =>
@@ -35,7 +35,7 @@ export default function ImageCarousel() {
                            priority
                            src={image} alt={'test'} width={400} height={100}></Image>)
             }
-            <button className='backdrop-brightness-125 p-4 rounded-full'
+            <button className='backdrop-brightness-125 p-4 rounded-full disabled:opacity-25' disabled={currentIndex === images.length-1}
                     onClick={event => nextImage()}>{'>'}</button>
         </div>
     )

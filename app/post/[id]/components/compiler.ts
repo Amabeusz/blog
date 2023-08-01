@@ -1,45 +1,29 @@
-// function compile(markdown: string) {
-//     let compiled = ''
-//
-//     const contentArray = markdown.split(/\r?\n/);
-//
-//     for (let i = 0; i < contentArray.length; i++) {
-//         const l = contentArray[i].trim()
-//
-//         if (l.charAt(0) === '*' && l.charAt(l.length - 1) === '*') {
-//             if (l.charAt(1) === '*' && l.charAt(l.length - 2) === '*') {
-//                 compiled += `<b>${l.substring(2, l.length - 2)}</b>`
-//             } else {
-//                 compiled += `<em>${l.substring(1, l.length - 1)}</em>`
-//             }
-//         }
-//
-//         if (l === '```') {
-//             let codeBlock = '<div style="width: fit-content; backdrop-filter: brightness(0.7); border: 1px solid gray; padding: 4px">'
-//
-//             for (let j = i + 1; j < contentArray.length; j++) {
-//                 const codeLine = contentArray[j].trim()
-//
-//                 if (codeLine === '```') {
-//                     codeBlock += '</div>'
-//                     i += i + 1;
-//                     break;
-//                 } else {
-//                     codeBlock += `<p>${j - i} ${codeLine}</p>`
-//                 }
-//             }
-//
-//             compiled += codeBlock
-//         }
-//     }
-//
-//     return compiled
-// }
+enum Marker {
+    Header1 = '#',
+    Header2 = '##',
+    Header3 = '###',
+    OrderedList = '^\\d\\.$',
+    UnorderedList = '-',
+    Block = '>',
+    Code = '```',
+}
+
+function compile2(markdown: string) {
+    let compiled = ''
+
+
+    return compiled
+}
 
 
 // cancel on space after/before key
 // Bold	**bold text**
 // Italic	*italicized text*
+
+
+// TODO: fix ul and ol (duplicates)
+// TODO: enum markers
+// TODO: look up for markers inside lines not only at beginning
 
 export default function compile(markdown : string) {
 
