@@ -11,7 +11,7 @@ async function getPost(id : string) {
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
     }
 }
 
@@ -61,12 +61,12 @@ async function Post({content}: any) {
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
 
     return (
-        <div className='max-w-[60%]'>
+        <div className='max-w-[60%] pt-4'>
             <div className='flex items-center'>
                 <p className='flex-auto text-4xl'>{title}</p>
                 <p className='text-gray-500 text-2xl'>{date}</p>
             </div>
-            <p>{lorem}</p>
+            <p className='py-2'>{lorem}</p>
             <div className='flex flex-col p-2 border' dangerouslySetInnerHTML={{__html: content}}/>
         </div>
     )
